@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>form</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="left">
+            <div id="lefttext">
+                <h1>University Visveswaraya College Of Engineering</h1>
+                <h2>The Placement Office</h2>
+                <h2>Registration form</h2>
+            </div>
+        </div>
+
+        <div id="right">
+            <form action="/" method="post" id="formid">
+                <div id="loginlink"><a href="/loginpage">Staff Login</a></div>
+                <div id="inputid">
+                    <div class="inputs">
+                        <label for="nameid">Name:</label><br>
+                        <input type="text" name="Name" id="nameid" placeholder="Name" class="inputc" required>
+                    </div>
+                    <div class="inputs">
+                        <label for="phoneid">Phone:</label><br>
+                        <input type="number" name="Phone" id="phoneid" placeholder="Phone" class="inputc" required>
+                    </div>
+                    <div class="inputs">
+                        <label for="ageid">Age:</label><br>
+                        <input type="number" name="Age" id="ageid" placeholder="Age" class="inputc" required>
+                    </div>
+                    <div class="inputs" id="geninp">
+                        <label for="genderid">Gender:</label><br>
+                        <input type="radio" name="Gender" id="genderid" class="inputcr" value="male">Male<br>
+                        <input type="radio" name="Gender" id="genderid" class="inputcr" value="female">Female
+                    </div>
+                    <div class="inputs">
+                        <label for="cgpaid">CGPA:</label><br>
+                        <input type="number" name="CGPA" id="cgpaid" placeholder="CGPA" class="inputc" required>
+                    </div>
+                    <div class="inputs"><label for="branchid">Branch:</label><br>
+                        <input type="text" name="Branch" id="branchid" placeholder="Branch" class="inputc" required>
+                    </div>
+                    <div class="inputs">
+                        <input id="subtn" type="submit" value="submit">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>

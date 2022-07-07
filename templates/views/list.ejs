@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/stylelist.css">
+    <title>lists</title>
+</head>
+
+<body>
+    <h1 id="listhead">List Of Students</h1>
+    <section id="containerlist">
+        <form id="searchlist" action="/search" method="post">
+            <label for="searchid" >search name:</label>
+            <input id="searchid"type="search" placeholder="search name" name="searchname" required>
+            <input type="submit">
+        </form>
+        <table class="tablec">
+            <thead class="theadc">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>C.G.P.A</th>
+                    <th>Gender</th>
+                    <th>Branch</th>
+                    <th>Phone</th>
+                    <th>Offers</th>
+                    <th>Remarks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let i=0;i<data.length;i++){ %>
+                <tr>
+                    <td><%= data[i].name %></td>
+                    <td><%= data[i].age %></td>
+                    <td><%= data[i].cgpa %></td>
+                    <td><%= data[i].gender %></td>
+                    <td><%= data[i].branch %></td>
+                    <td><%= data[i].phone %></td> 
+                    <td><%= data[i].offers %></td> 
+                    <td><%= data[i].remarks %></td> 
+                    <td><a href="/delete/<%= data[i]._id %>">delete</a></td>
+                    <td><a href="/update/<%= data[i]._id %>">update</a></td>
+                    <!-- <td>Rathik</td>
+                    <td>21</td>
+                    <td>69</td>
+                    <td>Male</td>
+                    <td>Mechanical</td>
+                    <td>6969696969</td>
+                    <td>delete</td> -->
+                </tr>
+                <%}%>
+            </tbody>
+    </section>
+    </table>
+</body>
+
+</html>

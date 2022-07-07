@@ -1,0 +1,161 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    background-color: rgb(9, 61, 93);
+    max-width: 100%;
+}
+
+#left{
+    min-width: 59vw;
+    /* background-image: url(/images/UVCE_03.jpg); */
+    background-image: url(https://www.thehindu.com/incoming/mgxxq/article65508289.ece/alternates/FREE_1200/UVCE_03.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position-y: center;
+    background-size: 100% 65%;
+}
+#lefttext{
+    text-align: center;
+    font-size: large;
+    background-color: #ffffff;
+    margin-top: 40vh;
+    opacity: 0.6;
+}
+
+#lefttext h1 h2{
+    font-weight: bold;
+    color: #000000;
+}
+#right {
+    min-width: 39vw;
+    min-height: 100vh;
+    color: rgb(223, 187, 187);
+}
+#loginlink{
+    display:inline-block;
+    margin-top: 5vh;
+    color:white;
+}
+
+#loginlink a{
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    color:white;
+    font-size: 1.4em;
+}
+#inputid {
+    max-width: 75vw;
+}
+.inputs {
+    display: block;
+    max-width: 20vw;
+    margin-top: 3.5vh;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5em;
+}
+
+.inputc {
+    min-width: 20vw;
+}
+
+.inputs input {
+    font-size: x-large;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+}
+
+@media only screen and (max-width:930px){
+    .inputs{
+        font-size:0.95em;
+    }
+    #lefttext{
+        font-size:0.99em;
+    }
+    .inputs input{
+        font-size:0.98em;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .container{
+        flex-direction: column;
+    }
+    #left{
+        background-size: 100% 100%;
+    }
+}
+
+/* login page */
+#loginf{
+    border: 2px solid #ff0000;
+    border-radius: 4vh;
+    max-width: 40%;
+    min-height: 40vh;
+    margin: 10vh auto ;
+    padding: 0 1vw ;
+    background-color: antiquewhite;
+}
+#loginf label{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 5vh;
+    display: block;
+}
+#loginf input{
+    font-size: 1.2em;
+    width: 100%;
+    padding:0.2rem;
+}
+#submitlogin {
+    display: inline-block;
+    margin-top: 7vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width:500px){
+    #loginf{
+        max-width: 60%;
+    }
+}
+
+/* update styling */
+#update_container{
+    text-align: center;
+    padding: 1rem;
+    min-height: 100vh;
+    background-color: antiquewhite;
+}
+.updateform{
+    min-width: 20vw;
+    min-height: 30vh;
+    max-width: 30vw;
+    margin: 25vh auto ;
+    border: 2px solid red;
+    border-radius:5vh;
+    padding: 1.2em;
+}
+.updateform label{
+    font-size: 1.5em;
+}
+.updateform input{
+    font-size: 1.3em;
+    width:100%;
+}
+.updateform select{
+    font-size: 1.5em;
+    width:100%;
+}
+.updateform form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 20vh;
+}

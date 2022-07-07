@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#listhead{
+    padding-top: 2vh;
+    background-color: antiquewhite;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+}
+#containerlist{
+    background-color: antiquewhite;
+    min-height: 95vh;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+table{
+    border-spacing: 0px;
+    width: 80%;
+    margin-top:2em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(239, 224, 224);
+}
+.tablec td,.tablec th{
+    padding: .75em;
+    vertical-align: top;
+    text-align: center;
+    border-top: 2px solid ;
+}
+#searchlist{
+    margin-left:70vw;
+}
+#searchlist input{
+    padding:0.25em;
+    font-size:0.98em;
+}
+#searchlist label{
+    font-size:1.2em;
+    font-weight: bold;
+}
+
+@media only screen and (max-width:450px){
+    #searchlist{
+        margin:auto ;
+    }
+}

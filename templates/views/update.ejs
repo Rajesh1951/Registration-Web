@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>update</title>
+</head>
+
+<body>
+    <div id="update_container">
+        <h1>Update Offers and Remarks of Student</h1>
+        <div class="updateform">
+            <h2>Student name: <%= student %> </h2>
+            <form action="/update/<%= id %>" method="post">
+                <label for="offerid">Enter number of Offers:
+                </label>
+                <input id="offerid" type="number" name="offers" placeholder="enter offers">
+                <select name="remarks" id="remarkid">
+                    <option value="decent">Select</option>
+                    <option value="good">Good</option>
+                    <option value="decent">Decent</option>
+                    <option value="bad">Bad</option>
+                </select>
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
