@@ -5,12 +5,13 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node src/app.js"
+    "start": "node src/app.js"
   },
   "keywords": [],
   "author": "Rajesh S",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.1",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "hbs": "^4.2.0",

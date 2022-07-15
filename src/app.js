@@ -2,15 +2,14 @@ const express = require('express');
 const hbs = require('hbs');
 const ejs = require('ejs');
 const path = require('path');
-
+require('dotenv').config()
 // mongoose connection
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://rajesh:WtoNMGmNp7Yvd1Un@cluster0.8oqsh.mongodb.net/registration?retryWrites=true&w=majority")
+mongoose.connect(process.env.MONGO_URL,{useNewUrlParser:true})
     .then(() => console.log('connection sucessful'))
     .catch(() => console.log("connections failed"))
 
-// require("./db/conect");
 const Register = require('./models/regis')
 const port = process.env.PORT || 8000;
 
@@ -42,7 +41,7 @@ app.post('/', async (req, res) => {
         res.status(201).render('index')
     }
     catch (err) {
-        res.send('<h1>Phone number entered was already used</h1>');
+        res.send(err);
     }
 })
 
