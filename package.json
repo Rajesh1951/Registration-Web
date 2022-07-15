@@ -4,10 +4,11 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node src/app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Rajesh S",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.8",
