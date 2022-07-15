@@ -15,18 +15,14 @@ const partpath = path.join(__dirname, "../templates/partials");
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(staticpath));
-// app.set('view engine', 'hbs');
 app.set('view engine', 'ejs');
 app.set('views', temppath);
 hbs.registerPartials(partpath);
 app.get('/', (req, res) => {
-    // res.send('hi from express');
     res.render('index')
 })
 app.post('/', async (req, res) => {
     try {
-        // console.log(req.body.Name)
-        // res.send(req.body.Name)
         const registerstud = new Register({
             name: req.body.Name,
             phone: req.body.Phone,
@@ -57,16 +53,10 @@ app.post('/search', (req, res) => {
     getdoc();
 })
 app.post('/loginpage', (req, res) => {
-    // const logid=(req.body.loginid);
     const pass = req.body.password;
     if (pass === 'Rajesh@2001') {
-        // Register.find((req,resp)=>{
-        //     const result=resp;
-        //     console.log(result)
-        // })
         const getdoc = async () => {
             const result = await Register.find().sort({ name: 1 })
-            // console.log(result)
             res.render('list', { data: result })
         }
         getdoc();
@@ -112,4 +102,4 @@ app.post('/update/:id', (req, res) => {
         })
         .catch(err => console.log('update fail', err))
 })
-app.listen(port, () => console.log('listening'))
+app.listen(port, () => console.log('listening @',port))
