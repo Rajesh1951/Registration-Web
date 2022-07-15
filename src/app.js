@@ -46,8 +46,8 @@ app.get('/loginpage', (req, res) => {
 app.post('/search', (req, res) => {
     const search_name = req.body.searchname;
     const getdoc = async () => {
-        const v=new RegExp(search_name,'gi');
-        const result = await Register.find({ name:{$regex: v }} )
+        const v = new RegExp(search_name, 'gi');
+        const result = await Register.find({ name: { $regex: v } })
         res.render('list', { data: result })
     }
     getdoc();
@@ -102,4 +102,4 @@ app.post('/update/:id', (req, res) => {
         })
         .catch(err => console.log('update fail', err))
 })
-app.listen(port, () => console.log('listening @',port))
+app.listen(port, () => console.log('listening @', port))

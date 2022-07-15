@@ -13,8 +13,8 @@
     <h1 id="listhead">List Of Students</h1>
     <section id="containerlist">
         <form id="searchlist" action="/search" method="post">
-            <label for="searchid" >search name:</label>
-            <input id="searchid"type="search" placeholder="search name" name="searchname" required>
+            <label for="searchid">search name:</label>
+            <input id="searchid" type="search" placeholder="search name" name="searchname" required>
             <input type="submit">
         </form>
         <table class="tablec">
@@ -32,19 +32,35 @@
             </thead>
             <tbody>
                 <% for(let i=0;i<data.length;i++){ %>
-                <tr>
-                    <td><%= data[i].name %></td>
-                    <td><%= data[i].age %></td>
-                    <td><%= data[i].cgpa %></td>
-                    <td><%= data[i].gender %></td>
-                    <td><%= data[i].branch %></td>
-                    <td><%= data[i].phone %></td> 
-                    <td><%= data[i].offers %></td> 
-                    <td><%= data[i].remarks %></td> 
-                    <td><a href="/delete/<%= data[i]._id %>">delete</a></td>
-                    <td><a href="/update/<%= data[i]._id %>">update</a></td>
-                </tr>
-                <%}%>
+                    <tr>
+                        <td>
+                            <%= data[i].name %>
+                        </td>
+                        <td>
+                            <%= data[i].age %>
+                        </td>
+                        <td>
+                            <%= data[i].cgpa %>
+                        </td>
+                        <td>
+                            <%= data[i].gender %>
+                        </td>
+                        <td>
+                            <%= data[i].branch %>
+                        </td>
+                        <td>
+                            <%= data[i].phone %>
+                        </td>
+                        <td>
+                            <%= data[i].offers %>
+                        </td>
+                        <td>
+                            <%= data[i].remarks %>
+                        </td>
+                        <td><a href="/delete/<%= data[i]._id %>">delete</a></td>
+                        <td><a href="/update/<%= data[i]._id %>">update</a></td>
+                    </tr>
+                    <%}%>
             </tbody>
     </section>
     </table>
