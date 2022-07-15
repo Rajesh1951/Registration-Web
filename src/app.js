@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 
 mongoose.connect(process.env.MONGO_URL,{useNewUrlParser:true})
     .then(() => console.log('connection sucessful'))
-    .catch(() => console.log("connections failed"))
+    .catch((err) => console.log("connections failed"))
 
 const Register = require('./models/regis')
 const port = process.env.PORT || 8000;
