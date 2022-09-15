@@ -1,5 +1,5 @@
 # Registration-Web
--> Full stack website that supports CRUD operations
+-> Full stack website that supports CRUD operations.
 -> User can enter(CREATE) details and it will be stored to database.
 -> A staff member can login using password and view(read) the data of users and also can delete & update data.
 ![43bf09e8-05a2-45d9-982e-5bad06c198c2](https://user-images.githubusercontent.com/106857701/190381653-8eeb293d-fd5d-49d2-aa4b-5f8e54a827a3.jpg)
